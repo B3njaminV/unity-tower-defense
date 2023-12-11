@@ -23,6 +23,7 @@
 
 👤 **GIRAUDIER Augustin**
 
+* GitHub: [@GIRAUDIERAugustin](https://github.com/AugustinGiraudier)
 * LinkedIn: [@GIRAUDIER Augustin](https://fr.linkedin.com/in/augustin-giraudier)
 
 
