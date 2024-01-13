@@ -16,36 +16,68 @@ public class ZombieScript : MonoBehaviour
     [Min(1)]
     private int attack = 5;
 
-    private float attackCooldown = 2f;
+    private float attackCooldown = 3f;
+    private float WalkCooldownAfterDamage = 1f;
     private float lastAttackTime;
+    private float lastDamageTime;
+
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         lastAttackTime = Time.time - attackCooldown;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = Vector2.left * speed;
+        float veloc = Math.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", veloc);
+        if (Time.time - lastDamageTime > WalkCooldownAfterDamage && veloc < speed)
+        {
+            rb.AddForce(Vector2.left);
+        }
+        //rb.velocity = Vector2.left * speed;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
 
-
-        // Abort if we already attacked recently.
-        if (Time.time - lastAttackTime < attackCooldown) return;
-
-        // CompareTag is cheaper than .tag ==
-        if (collision.gameObject.CompareTag("Plant"))
+        // Take damages from bullet
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            collision.gameObject.GetComponent<LifeRange>().TakeDamages(attack);
+            animator.SetTrigger("Damages");
+            rb.velocity = Vector2.zero;
+            lastDamageTime = Time.time;
 
-            // Remember that we recently attacked.
+            // reset attack time
             lastAttackTime = Time.time;
+            Destroy(collision.gameObject);
         }
+
+        // Attack plant
+        else if (collision.gameObject.CompareTag("Plant") && Time.time - lastAttackTime > attackCooldown)
+        {
+            Attack(collision.gameObject.GetComponent<LifeRange>());
+        }
+
+    }
+
+    private void Attack(LifeRange range)
+    {
+        animator.SetTrigger("Attack");
+        StartCoroutine(WillGiveDamages(range));
+
+        // Remember that we recently attacked.
+        lastAttackTime = Time.time;
+    }
+
+    private IEnumerator WillGiveDamages(LifeRange range)
+    {
+        yield return new WaitForSeconds(0.3f);
+        range.TakeDamages(attack);
     }
 }

@@ -11,6 +11,7 @@ public class bulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        //GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed);
     }
 }

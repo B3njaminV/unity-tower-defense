@@ -15,7 +15,7 @@ public class PlantScript : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        InvokeRepeating("Attack", 3, 3);
+        InvokeRepeating("Attack", 5, 5);
     }
 
     private void Attack()
