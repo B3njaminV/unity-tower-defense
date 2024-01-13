@@ -435,7 +435,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -547,7 +547,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -750,7 +750,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1017,7 +1017,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1120,7 +1120,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 5505802366865664417}
   - component: {fileID: 666812367055395071}
   m_Layer: 8
-  m_Name: Zombie_Normal (default)
+  m_Name: Zombie_Purple
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,9 +1245,9 @@ MonoBehaviour:
   lifeLowColor: {r: 0, g: 0, b: 0, a: 0}
   lifeSlider: {fileID: 0}
   lifeFillImage: {fileID: 0}
-  maxLife: 100
+  maxLife: 200
   speed: 3
-  attack: 40
+  attack: 80
 --- !u!50 &1591183694155323155
 Rigidbody2D:
   serializedVersion: 4
@@ -1307,8 +1307,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.16139, y: 0.8810539}
-  m_Size: {x: 0.86844087, y: 8.689203}
+  m_Offset: {x: 1.16139, y: -0.9676806}
+  m_Size: {x: 0.86844087, y: 4.9917364}
   m_Direction: 0
 --- !u!70 &666812367055395071
 CapsuleCollider2D:
@@ -1342,8 +1342,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6900225, y: 0.3604312}
-  m_Size: {x: 0.61213446, y: 6.459132}
+  m_Offset: {x: 1.6900225, y: -0.76001465}
+  m_Size: {x: 0.6121345, y: 4.218244}
   m_Direction: 0
 --- !u!1 &8539148842809538833
 GameObject:
@@ -1462,7 +1462,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d2e373d7c7c6e41b5aa688e9f85c85, type: 2}
+  - {fileID: 2100000, guid: 86a3df994fe42454c9f240862401ca41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
