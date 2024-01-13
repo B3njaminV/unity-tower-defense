@@ -8,12 +8,13 @@ public class bulletScript : MonoBehaviour
     [Min(1)]
     private float speed = 1f;
 
+    [SerializeField]
+    [Min(1)]
     private int damages = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        //GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed);
     }
 
