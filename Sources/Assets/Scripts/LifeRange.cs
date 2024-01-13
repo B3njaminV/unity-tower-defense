@@ -21,30 +21,42 @@ public class LifeRange : MonoBehaviour
     private int currentLife;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         currentLife = maxLife;
-        lifeFillImage.color = lifeOkColor;
+        if(lifeFillImage != null && lifeOkColor != null)
+        {
+            lifeFillImage.color = lifeOkColor;
+        }
     }
     
     public void TakeDamages(int damages)
     {
         currentLife = Math.Max(currentLife - damages, 0);
-        float ratio = currentLife / (float)maxLife; ;
-        lifeSlider.value = ratio;
+        float ratio = currentLife / (float)maxLife;
+        if(lifeSlider != null && lifeFillImage != null && lifeLowColor != null)
+        {
+            lifeSlider.value = ratio;
 
-        if (ratio < 0.5f) { 
-            lifeFillImage.color = lifeLowColor; 
+            if (ratio < 0.5f)
+            {
+                lifeFillImage.color = lifeLowColor;
+            }
         }
 
-        if (currentLife <= 0) {
+        if (!isAlive()) {
             Death();
         }
     }
 
-    private void Death()
+    protected virtual void Death()
     {
         Destroy(this.gameObject);
     }
+
+    protected bool isAlive()
+    {
+        return currentLife > 0;
+    } 
 
 }
