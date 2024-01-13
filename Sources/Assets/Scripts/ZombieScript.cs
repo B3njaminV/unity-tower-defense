@@ -38,7 +38,7 @@ public class ZombieScript : LifeRange
     {
         if (isDead) { return; }
 
-        float veloc = Math.Abs(rb.velocity.x);
+        float veloc = - rb.velocity.x;
         animator.SetFloat("Speed", veloc);
         if (Time.time - lastDamageTime > WalkCooldownAfterDamage && veloc < speed)
         {
@@ -98,7 +98,7 @@ public class ZombieScript : LifeRange
 
     private IEnumerator WillDie()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
     }
 }

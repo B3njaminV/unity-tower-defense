@@ -1,67 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &468159625154651508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4518277003217223586}
-  m_Layer: 6
-  m_Name: SunSpawner1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4518277003217223586
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468159625154651508}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 2.24, z: -0.000843423}
-  m_LocalScale: {x: 0.6822679, y: 0.6822679, z: 0.6822679}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7903852264102452092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2038976454136166926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8552784868991939800}
-  m_Layer: 6
-  m_Name: SunSpawner4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8552784868991939800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038976454136166926}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.82, y: 1.55, z: -0.000843423}
-  m_LocalScale: {x: 0.6822679, y: 0.6822679, z: 0.6822679}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7903852264102452092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2391903887055418413
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,10 +13,9 @@ GameObject:
   - component: {fileID: 2943467077139222634}
   - component: {fileID: 5733715625622767517}
   - component: {fileID: 4903275272698782580}
-  - component: {fileID: 7704495730924931607}
-  - component: {fileID: 8249369840446838364}
+  - component: {fileID: 548656023051602579}
   m_Layer: 6
-  m_Name: plant-Sun
+  m_Name: plant-rock
   m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,11 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3251813968824711902}
-  - {fileID: 4518277003217223586}
-  - {fileID: 4869733977604557957}
-  - {fileID: 729657220137123257}
-  - {fileID: 8552784868991939800}
-  - {fileID: 4351201446375502474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5916742264473389775
@@ -146,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 68c614ed8a6f72b49af8857835f79e85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5e9b2f1a3d4dcf48bb225d0696da294, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -218,7 +150,7 @@ MonoBehaviour:
   lifeLowColor: {r: 1, g: 0.16981131, b: 0.16981131, a: 0.50980395}
   lifeSlider: {fileID: 698263157698739556}
   lifeFillImage: {fileID: 2027906195198795683}
-  maxLife: 70
+  maxLife: 250
 --- !u!50 &4903275272698782580
 Rigidbody2D:
   serializedVersion: 4
@@ -246,7 +178,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &7704495730924931607
+--- !u!95 &548656023051602579
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -256,7 +188,7 @@ Animator:
   m_GameObject: {fileID: 2391903887055418413}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1135c787baf6a74195130ea4c738268, type: 2}
+  m_Controller: {fileID: 9100000, guid: 515539219bde27d4fa80ef0059f02235, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -267,119 +199,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8249369840446838364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391903887055418413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c2358651131cd4fb510be4d3673672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sunPrefab: {fileID: 4818353342819170410, guid: 58bd5da264af77440a451a341ba62b83, type: 3}
-  sunSpawners:
-  - {fileID: 4518277003217223586}
-  - {fileID: 4869733977604557957}
-  - {fileID: 729657220137123257}
-  - {fileID: 8552784868991939800}
-  - {fileID: 4351201446375502474}
-  growCooldown: 9
---- !u!1 &2407196816468439635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 729657220137123257}
-  m_Layer: 6
-  m_Name: SunSpawner3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &729657220137123257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2407196816468439635}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.34, y: -0.99, z: -0.000843423}
-  m_LocalScale: {x: 0.6822679, y: 0.6822679, z: 0.6822679}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7903852264102452092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3299385674543375350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4351201446375502474}
-  m_Layer: 6
-  m_Name: SunSpawner5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4351201446375502474
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299385674543375350}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.22, y: 1.53, z: -0.000843423}
-  m_LocalScale: {x: 0.6822679, y: 0.6822679, z: 0.6822679}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7903852264102452092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4091564895877532497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4869733977604557957}
-  m_Layer: 6
-  m_Name: SunSpawner2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4869733977604557957
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4091564895877532497}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.09, y: -1.39, z: -0.000843423}
-  m_LocalScale: {x: 0.6822679, y: 0.6822679, z: 0.6822679}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7903852264102452092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1790394573670375775
 PrefabInstance:
   m_ObjectHideFlags: 0

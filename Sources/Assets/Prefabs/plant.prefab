@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1025977678869384611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BouletteSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5733715625622767517}
   - component: {fileID: 4903275272698782580}
   - component: {fileID: 1342265031438970982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: plant
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -62,8 +62,8 @@ Transform:
   m_GameObject: {fileID: 2391903887055418413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5157, y: 1.4528, z: 0}
-  m_LocalScale: {x: 1.4657, y: 1.4657, z: 1.4657}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3251813968824711902}
@@ -266,6 +266,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2468846213505236620, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789900143463707706, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834238499085794019, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -300,15 +312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.080756
+      value: 0.02521068
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.080756
+      value: 0.030076925
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.080756
+      value: 0.07504574
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -344,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5.14
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -358,9 +370,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6126632366896866892, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8917782402547871800, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_Name
       value: LifeBarUi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917782402547871800, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
