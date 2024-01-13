@@ -120,8 +120,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16981979, y: -0.028306272}
-  m_Size: {x: 7.1994185, y: 14.614877}
+  m_Offset: {x: -3.4307814, y: -0.0129856}
+  m_Size: {x: 0.85625225, y: 12.868495}
   m_Direction: 0
 --- !u!70 &2203483182311152440
 CapsuleCollider2D:
@@ -155,8 +155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16981979, y: -0.028306272}
-  m_Size: {x: 7.1994185, y: 14.614877}
+  m_Offset: {x: -3.0324066, y: -0.028306272}
+  m_Size: {x: 1.1014186, y: 14.614877}
   m_Direction: 0
 --- !u!114 &9102449201362250695
 MonoBehaviour:
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3a0da10c984e042bafd1d023002025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!50 &1180904426813946068
 Rigidbody2D:
   serializedVersion: 4

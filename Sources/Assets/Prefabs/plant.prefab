@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 2943467077139222634}
   - component: {fileID: 162262314018709045}
   - component: {fileID: 5733715625622767517}
+  - component: {fileID: 4903275272698782580}
+  - component: {fileID: 1342265031438970982}
   m_Layer: 0
   m_Name: plant
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 2391903887055418413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.5157, y: 1.4528, z: 0}
+  m_LocalScale: {x: 1.4657, y: 1.4657, z: 1.4657}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3251813968824711902}
@@ -77,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e688cd52439f59d4081ced7e821dbed2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23b12322f6260044dbae75306ecc583d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29344678, y: -0.22008538}
+  m_Offset: {x: -0.02379179, y: 0.04957056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.8, y: 16.12}
+    oldSize: {x: 6.51, y: 6.24}
     newSize: {x: 10.8, y: 16.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.985192, y: 15.23966}
+  m_Size: {x: 5.7479496, y: 5.881029}
   m_EdgeRadius: 0
 --- !u!114 &162262314018709045
 MonoBehaviour:
@@ -157,11 +159,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45b659cd311bb041845f8ba1fa3876b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeOkColor: {r: 0.047169805, g: 1, b: 0.14219785, a: 1}
-  lifeLowColor: {r: 1, g: 0.16981131, b: 0.16981131, a: 1}
+  lifeOkColor: {r: 0.047169805, g: 1, b: 0.14219785, a: 0.4745098}
+  lifeLowColor: {r: 1, g: 0.16981131, b: 0.16981131, a: 0.50980395}
   lifeSlider: {fileID: 698263157698739556}
   lifeFillImage: {fileID: 2027906195198795683}
   maxLife: 100
+--- !u!50 &4903275272698782580
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391903887055418413}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!95 &1342265031438970982
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391903887055418413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f00df877b9efc84985f2788a18293a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1790394573670375775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.9
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: 3888860424042175361, guid: 76a804546a260c045a742e611dd5f2fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
