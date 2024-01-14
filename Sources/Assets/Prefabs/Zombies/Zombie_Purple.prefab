@@ -1246,7 +1246,7 @@ MonoBehaviour:
   lifeSlider: {fileID: 0}
   lifeFillImage: {fileID: 0}
   maxLife: 200
-  speed: 3
+  speed: 2.5
   attack: 80
 --- !u!50 &1591183694155323155
 Rigidbody2D:
@@ -1307,8 +1307,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.16139, y: -0.9676806}
-  m_Size: {x: 0.86844087, y: 4.9917364}
+  m_Offset: {x: 1.16139, y: -0.60617703}
+  m_Size: {x: 0.86844087, y: 4.26873}
   m_Direction: 0
 --- !u!70 &666812367055395071
 CapsuleCollider2D:
@@ -1342,8 +1342,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6900225, y: -0.76001465}
-  m_Size: {x: 0.6121345, y: 4.218244}
+  m_Offset: {x: 1.6900225, y: -0.3347163}
+  m_Size: {x: 0.6121345, y: 3.3676488}
   m_Direction: 0
 --- !u!1 &8539148842809538833
 GameObject:
