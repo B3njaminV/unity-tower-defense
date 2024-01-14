@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7c2100cb14ad64cbf73a2a37a5b6a0, type: 3}
+  m_Name: Scenario1
+  m_EditorClassIdentifier: 
+  startingRessources: 50
+  spawns:
+  - spawnTime: 3
+    line: 0
+    ZombieType: 0
+  - spawnTime: 6
+    line: 1
+    ZombieType: 2
+  - spawnTime: 6
+    line: 2
+    ZombieType: 2
+  - spawnTime: 6
+    line: 3
+    ZombieType: 2
+  - spawnTime: 6
+    line: 4
+    ZombieType: 2
+  plants:
+  - prefab: {fileID: 2391903887055418413, guid: 3420c41c1afc8d544af173b1d4d42991, type: 3}
+    price: 50
+  - prefab: {fileID: 2391903887055418413, guid: fa96ae14163fd6e4db50534447edce91, type: 3}
+    price: 100
+  zombies:
+  - {fileID: 8028504333613449318, guid: df083ad502d97fc4d85f4c95d686c40e, type: 3}
+  - {fileID: 8028504333613449318, guid: ed37209befff2a049b3b5313c584d7f1, type: 3}
+  - {fileID: 8028504333613449318, guid: 21a7fa1f82ca26f468b159eefeadad96, type: 3}
