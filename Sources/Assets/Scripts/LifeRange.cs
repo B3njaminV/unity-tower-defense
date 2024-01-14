@@ -28,6 +28,10 @@ public class LifeRange : MonoBehaviour
         {
             lifeFillImage.color = lifeOkColor;
         }
+        if(lifeSlider != null)
+        {
+            lifeSlider.gameObject.SetActive(false);
+        }
     }
     
     public void TakeDamages(int damages)
@@ -36,6 +40,7 @@ public class LifeRange : MonoBehaviour
         float ratio = currentLife / (float)maxLife;
         if(lifeSlider != null && lifeFillImage != null && lifeLowColor != null)
         {
+            lifeSlider.gameObject.SetActive(true);
             lifeSlider.value = ratio;
 
             if (ratio < 0.5f)

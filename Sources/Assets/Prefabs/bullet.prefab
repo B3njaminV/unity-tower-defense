@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 800
-  damages: 19
+  damages: 18
 --- !u!50 &-644556077191626076
 Rigidbody2D:
   serializedVersion: 4
