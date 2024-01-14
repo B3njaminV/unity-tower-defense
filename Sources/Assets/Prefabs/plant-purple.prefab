@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 162262314018709045}
   - component: {fileID: 5733715625622767517}
   - component: {fileID: 4903275272698782580}
-  - component: {fileID: 1342265031438970982}
+  - component: {fileID: 6350032856041564608}
   m_Layer: 6
-  m_Name: plant
+  m_Name: plant-purple
   m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23b12322f6260044dbae75306ecc583d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e611c94b975784f84a9fd2887f646c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpawnPosition: {fileID: 1025977678869384611}
-  bulletPrefab: {fileID: 2190042072848539097, guid: a19802e25f2fd7e42b6b747efd8c1f49, type: 3}
+  bulletPrefab: {fileID: 2190042072848539097, guid: 1df532fd99f95d241a18570e386b3a56, type: 3}
   zombieDetectionLength: 35
-  attackCooldown: 5
+  attackCooldown: 4
 --- !u!114 &5733715625622767517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &1342265031438970982
+--- !u!95 &6350032856041564608
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ Animator:
   m_GameObject: {fileID: 2391903887055418413}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4f00df877b9efc84985f2788a18293a9, type: 2}
+  m_Controller: {fileID: 9100000, guid: fcd4b36c8ef42dc47824e82aa6af4b13, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
