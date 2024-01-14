@@ -20,6 +20,8 @@ public class ZombieScript : LifeRange
     private float lastAttackTime;
     private float lastDamageTime;
 
+    private float knockbackForce = .1f;
+
     private Animator animator;
 
     private bool isDead = false;
@@ -39,12 +41,17 @@ public class ZombieScript : LifeRange
         if (isDead) { return; }
 
         float veloc = - rb.velocity.x;
+        if(veloc < -knockbackForce) 
+        { 
+            rb.velocity = new Vector2(-knockbackForce, 0f);
+            veloc = -knockbackForce;
+        }
+
         animator.SetFloat("Speed", veloc);
         if (Time.time - lastDamageTime > WalkCooldownAfterDamage && veloc < speed)
         {
             rb.AddForce(Vector2.left);
         }
-        //rb.velocity = Vector2.left * speed;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -55,14 +62,16 @@ public class ZombieScript : LifeRange
         // Take damages from bullet
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            var bullet = collision.gameObject.GetComponent<bulletScript>();
+
             animator.SetTrigger("Damages");
             rb.velocity = Vector2.zero;
             lastDamageTime = Time.time;
-            this.TakeDamages(collision.gameObject.GetComponent<bulletScript>().getDamages());
+            this.TakeDamages(bullet.getDamages());
 
             // reset attack time
             lastAttackTime = Time.time;
-            Destroy(collision.gameObject);
+            bullet.Remove();
         }
 
         // Attack plant

@@ -181,6 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpawnPosition: {fileID: 1025977678869384611}
   bulletPrefab: {fileID: 2190042072848539097, guid: a19802e25f2fd7e42b6b747efd8c1f49, type: 3}
+  zombieDetectionLength: 35
+  attackCooldown: 6
 --- !u!114 &5733715625622767517
 MonoBehaviour:
   m_ObjectHideFlags: 0

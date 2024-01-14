@@ -16,11 +16,17 @@ public class bulletScript : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed);
+        Invoke("Remove", 5);
     }
 
     public int getDamages() { return damages; }
     public void setDamages(int damages)
     {
         this.damages = damages;
+    }
+
+    public void Remove()
+    {
+        Destroy(gameObject);
     }
 }
