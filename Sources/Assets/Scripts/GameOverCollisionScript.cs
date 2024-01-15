@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverCollisionScript : MonoBehaviour
 {
@@ -11,5 +12,9 @@ public class GameOverCollisionScript : MonoBehaviour
         {
             Debug.Log("Game Over");
         }
+
+        GameObject.Find("GameOver").GetComponent<Canvas>().enabled = true;
+
+        Time.timeScale = 0;
     }
 }
