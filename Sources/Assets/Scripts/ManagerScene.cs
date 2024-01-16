@@ -13,5 +13,10 @@ public class ManagerScene : MonoBehaviour
         Application.Quit();
     }
 
+    public void ResetTimeScale()
+    {
+        Time.timeScale = 1;
+    }
+
 
 }
