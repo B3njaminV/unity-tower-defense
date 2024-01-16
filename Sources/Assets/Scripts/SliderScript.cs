@@ -15,13 +15,7 @@ public class SliderScript : MonoBehaviour
 
     void Update()
     {
-        UpdateSlider(0.1f * Time.deltaTime);
+        slider.value += 0.2f * Time.deltaTime;
     }
-
-    private void UpdateSlider(float nombre)
-    {
-        slider.value = nombre;
-    }
-
 
 }
