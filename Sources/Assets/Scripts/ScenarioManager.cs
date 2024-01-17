@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class ScenarioManager : MonoBehaviour
 {
-
-    [SerializeField]
     private SO_Scenario scenario;
 
     private float startingTime;
@@ -14,11 +12,16 @@ public class ScenarioManager : MonoBehaviour
 
     public float ElapsedTime { get { return Time.time - startingTime; } }
 
+    private void Awake()
+    {
+        scenario = GameManager.Instance.GetNextLevel();
+        spawners = GameObject.FindGameObjectsWithTag("ZombieSpawner");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         startingTime = Time.time;
-        spawners = GameObject.FindGameObjectsWithTag("ZombieSpawner");
         // shuffle spawners
         ListShuffler.Shuffle(spawners);
     }
