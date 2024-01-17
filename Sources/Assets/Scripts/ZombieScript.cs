@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZombieScript : LifeRange
 {
+    public static int NbDeath { get; set; } = 0;
 
     private Rigidbody2D rb;
 
@@ -99,6 +100,7 @@ public class ZombieScript : LifeRange
 
     protected override void Death()
     {
+        NbDeath++;
         StartCoroutine(WillDie());
         animator.SetTrigger("Death");
         isDead = true;
@@ -110,4 +112,5 @@ public class ZombieScript : LifeRange
         yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
     }
+
 }

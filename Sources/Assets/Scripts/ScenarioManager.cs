@@ -41,4 +41,9 @@ public class ScenarioManager : MonoBehaviour
         }
     }
 
+    public int GetNumberOfZombiesInScenario()
+    {
+        return scenario.spawns.Count;
+    }
+
 }

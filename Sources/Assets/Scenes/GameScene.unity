@@ -931,6 +931,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5800324314253754121, guid: 98df967e50b0a104da7624d856d9fbb4, type: 3}
   m_PrefabInstance: {fileID: 4197805497192981848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &637464324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779027467250137487, guid: 98df967e50b0a104da7624d856d9fbb4, type: 3}
+  m_PrefabInstance: {fileID: 4197805497192981848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757f77c3c8fa7594c89b39b44a1a0383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &661579699
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661579700}
   - component: {fileID: 661579701}
-  - component: {fileID: 661579702}
+  - component: {fileID: 661579703}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1023,7 +1034,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &661579702
+--- !u!114 &661579703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1032,10 +1043,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 661579699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ef0ae8a78df9c419b7b59b849705f8, type: 3}
+  m_Script: {fileID: 11500000, guid: f53d0624d8bcbf64a90e9e9ca99d7d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 661579701}
 --- !u!1001 &667976043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1166,6 +1176,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3e5c5fc18faa94a8454a0225fb0a84, type: 3}
+--- !u!1 &787530052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787530054}
+  - component: {fileID: 787530053}
+  m_Layer: 0
+  m_Name: LevelAdvencement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &787530053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787530052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e7a32a8f6378f4cb27f0a00166d442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelRange: {fileID: 661579703}
+  scenarioManager: {fileID: 637464324}
+--- !u!4 &787530054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787530052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 448.96902, y: 227.87296, z: -2.894566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &982888697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2969,3 +3025,4 @@ SceneRoots:
   - {fileID: 1976441659}
   - {fileID: 1461145319}
   - {fileID: 1903234530}
+  - {fileID: 787530054}
