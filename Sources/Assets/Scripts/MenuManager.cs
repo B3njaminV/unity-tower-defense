@@ -8,7 +8,13 @@ public class MenuManager : MonoBehaviour
     private GameObject optionPannel;
 
     [SerializeField]
+    private GameObject commingSoonButton;
+
+    [SerializeField]
     private Text levelToLaunch;
+
+    [SerializeField]
+    private bool isInCurrentGame = false;
 
     private void Start()
     {
@@ -46,6 +52,20 @@ public class MenuManager : MonoBehaviour
         if(levelToLaunch != null)
         {
             levelToLaunch.text = (GameManager.Instance.CurrentLevel + 1).ToString();
+            
         }
+
+        if(commingSoonButton != null)
+        {
+            if (GameManager.Instance.AllLevelFinished(isInCurrentGame))
+            {
+                commingSoonButton.SetActive(true);
+            }
+            else
+            {
+                commingSoonButton.SetActive(false);
+            }
+        }
+        
     }
 }

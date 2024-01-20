@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
-
     }
     private GameManager() { }
 
@@ -45,6 +44,11 @@ public class GameManager : MonoBehaviour
     public void ResetSave()
     {
         Saver.RemoveSave();
+    }
+
+    public bool AllLevelFinished(bool isInGame = false)
+    {
+        return CurrentLevel + (isInGame ? 1 : 0) >= NbScenario;
     }
 
 }

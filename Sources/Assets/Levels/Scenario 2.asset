@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a7c2100cb14ad64cbf73a2a37a5b6a0, type: 3}
-  m_Name: Scenario1
+  m_Name: Scenario 2
   m_EditorClassIdentifier: 
-  startingRessources: 500
+  startingRessources: 450
   spawns:
-  - spawnTime: 3
+  - spawnTime: 6
     line: 0
+    ZombieType: 0
+  - spawnTime: 8
+    line: 1
+    ZombieType: 0
+  - spawnTime: 20
+    line: 2
+    ZombieType: 0
+  - spawnTime: 25
+    line: 3
+    ZombieType: 0
+  - spawnTime: 27
+    line: 4
     ZombieType: 0
   plants:
   - plant: 0
-    price: 50
+    price: 75
   - plant: 1
     price: 100
-  - plant: 2
-    price: 100
-  - plant: 3
-    price: 200
