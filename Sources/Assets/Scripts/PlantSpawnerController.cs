@@ -1,9 +1,12 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlantSpawnerController : MonoBehaviour
 {
     public Transform spawner;
+    public GameObject tooltipPrefab;
+
     private PlantMapperController mapper;
     
     private GameObject currentPlant = null;
@@ -22,6 +25,11 @@ public class PlantSpawnerController : MonoBehaviour
         if (currentPlant == null && moneyController.RemoveMoney(selectedPlant.price))
         {
             currentPlant = Instantiate(mapper.GetPlantPrefab(selectedPlant.plant), spawner);
+        }
+        else if(currentPlant == null)
+        {
+            GameObject tt = Instantiate(tooltipPrefab, spawner);
+            tt.GetComponent<TooltipView>().SetText("Not enough resources");
         }
     }
 }
