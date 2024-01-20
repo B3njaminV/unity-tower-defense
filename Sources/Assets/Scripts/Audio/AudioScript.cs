@@ -18,6 +18,8 @@ public class AudioScript : MonoBehaviour
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
 
+        _audioSource.volume = 0.2f;
+
         _audioManager = new AudioManager(_audioSource);
         PlaySong();
     }
