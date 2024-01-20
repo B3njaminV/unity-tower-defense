@@ -22,10 +22,11 @@ public class ShopController : MonoBehaviour
 
     private void Start()
     {
+        bool first = true;
         // activer uniquement les boutons des plantes du scenario :
-        foreach( var up in scenarioManager.GetUsablePlants())
+        foreach (var up in scenarioManager.GetUsablePlants())
         {
-            foreach ( var pb in plantsButtons)
+            foreach (var pb in plantsButtons)
             {
                 if (pb.plant.Equals(up.plant))
                 {
@@ -33,13 +34,13 @@ public class ShopController : MonoBehaviour
                     pb.obj.GetComponentInChildren<Text>().text = pb.price.ToString();
                     pb.obj.SetActive(true);
                     pb.obj.GetComponent<Button>().onClick.AddListener(delegate { btnClick(pb); });
+                    if (first)
+                    {
+                        first = false;
+                        btnClick(pb);
+                    }
                 }
             }
-        }
-
-        if (plantsButtons.Length > 0)
-        {
-            btnClick(plantsButtons[0]);
         }
     }
 

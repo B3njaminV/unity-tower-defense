@@ -30,7 +30,7 @@ MonoBehaviour:
     line: 4
     ZombieType: 2
   plants:
-  - plant: 0
+  - plant: 2
     price: 50
   - plant: 1
     price: 100
