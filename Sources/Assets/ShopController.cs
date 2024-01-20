@@ -3,6 +3,27 @@ using UnityEngine.UI;
 
 public class ShopController : MonoBehaviour
 {
+    ///////////////////////////////////////////////////////////////
+    /// SINGLETON
+    ///////////////////////////////////////////////////////////////
+    private static ShopController instance = null;
+    public static ShopController Instance => instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    private ShopController() { }
+
+    ///////////////////////////////////////////////////////////////
+    
     [System.Serializable]
     public class PlantButton
     {
