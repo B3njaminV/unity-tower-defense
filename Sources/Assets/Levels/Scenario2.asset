@@ -65,8 +65,6 @@ MonoBehaviour:
   - spawnTime: 3
     line: 1
     ZombieType: 2
-  plants: []
-  zombies:
-  - {fileID: 8028504333613449318, guid: df083ad502d97fc4d85f4c95d686c40e, type: 3}
-  - {fileID: 8028504333613449318, guid: ed37209befff2a049b3b5313c584d7f1, type: 3}
-  - {fileID: 8028504333613449318, guid: 21a7fa1f82ca26f468b159eefeadad96, type: 3}
+  plants:
+  - plant: 1
+    price: 100

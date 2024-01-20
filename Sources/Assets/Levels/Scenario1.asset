@@ -12,29 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7c2100cb14ad64cbf73a2a37a5b6a0, type: 3}
   m_Name: Scenario1
   m_EditorClassIdentifier: 
-  startingRessources: 50
+  startingRessources: 500
   spawns:
   - spawnTime: 3
     line: 0
     ZombieType: 0
-  - spawnTime: 6
-    line: 1
-    ZombieType: 2
-  - spawnTime: 6
-    line: 2
-    ZombieType: 2
-  - spawnTime: 6
-    line: 3
-    ZombieType: 2
-  - spawnTime: 6
-    line: 4
-    ZombieType: 2
   plants:
-  - prefab: {fileID: 2391903887055418413, guid: 3420c41c1afc8d544af173b1d4d42991, type: 3}
+  - plant: 0
     price: 50
-  - prefab: {fileID: 2391903887055418413, guid: fa96ae14163fd6e4db50534447edce91, type: 3}
+  - plant: 1
     price: 100
-  zombies:
-  - {fileID: 8028504333613449318, guid: df083ad502d97fc4d85f4c95d686c40e, type: 3}
-  - {fileID: 8028504333613449318, guid: ed37209befff2a049b3b5313c584d7f1, type: 3}
-  - {fileID: 8028504333613449318, guid: 21a7fa1f82ca26f468b159eefeadad96, type: 3}
+  - plant: 2
+    price: 100
+  - plant: 3
+    price: 200

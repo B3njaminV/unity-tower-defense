@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverCollisionScript : MonoBehaviour
 {
+    public LevelAdvencementController lac;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ennemy")
         {
-            GameObject.Find("GameOver").GetComponent<Canvas>().enabled = true;
-            Time.timeScale = 0;
+            lac.LevelLost();
         }
     }
 }

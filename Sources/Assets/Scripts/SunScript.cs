@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SunScript : MonoBehaviour
@@ -21,6 +19,7 @@ public class SunScript : MonoBehaviour
 
     public void OnMouseUp()
     {
+        GameObject.FindGameObjectWithTag("MoneyController")?.GetComponent<MoneyController>()?.AddMoney(creditValue);
         Destroy(gameObject);
     }
 }
