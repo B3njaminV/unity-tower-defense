@@ -9,7 +9,7 @@ public class GameOverCollisionScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ennemy")
         {
-            GameObject.Find("GameOver").GetComponent<Canvas>().enabled = true;
+            GameObject.Find("GameOver UI").GetComponent<Canvas>().enabled = true;
             Time.timeScale = 0;
         }
     }

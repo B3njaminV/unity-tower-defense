@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+
+
+
+        //Saver.RemoveSave();
+
+
     }
     private GameManager() { }
 
@@ -32,6 +38,12 @@ public class GameManager : MonoBehaviour
     {
         int index = Saver.GetSavedLevel();
         return _Scenarios[index];
+    }
+
+    public void LevelWin()
+    {
+        int index = Saver.GetSavedLevel();
+        Saver.UpdateCurrentLevelSave(++index);
     }
 
 }

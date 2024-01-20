@@ -17,6 +17,19 @@ public class LevelAdvencementController : MonoBehaviour
     }
     private void Update()
     {
-        levelRange.SetCurrentLevelAdvencement(ZombieScript.NbDeath / (float)nbTotalZombies);
+        float advencement = ZombieScript.NbDeath / (float)nbTotalZombies;
+        levelRange.SetCurrentLevelAdvencement(advencement);
+        if(advencement >= 1f)
+        {
+            LevelWin();
+        }
+    }
+
+    private void LevelWin()
+    {
+        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
+        GameManager.Instance.LevelWin();
+        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
+        gameObject.SetActive(false);
     }
 }

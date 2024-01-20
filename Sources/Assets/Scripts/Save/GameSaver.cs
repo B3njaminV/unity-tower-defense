@@ -1,4 +1,6 @@
 
+using System.Diagnostics;
+
 public class GameSaver
 {
 
@@ -19,7 +21,11 @@ public class GameSaver
 
     public int GetSavedLevel()
     {
-        return _dataSaver.LoadInt("Level") ?? 0;
+        return _dataSaver.LoadInt("level") ?? 0;
     }
 
+    public void RemoveSave()
+    {
+        _dataSaver.SaveInt("level", 0);
+    }
 }
