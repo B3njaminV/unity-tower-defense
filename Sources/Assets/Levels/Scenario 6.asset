@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7c2100cb14ad64cbf73a2a37a5b6a0, type: 3}
+  m_Name: Scenario 6
+  m_EditorClassIdentifier: 
+  startingRessources: 300
+  spawns:
+  - spawnTime: 20
+    line: 0
+    ZombieType: 0
+  - spawnTime: 25
+    line: 1
+    ZombieType: 0
+  - spawnTime: 30
+    line: 0
+    ZombieType: 1
+  - spawnTime: 37
+    line: 3
+    ZombieType: 0
+  - spawnTime: 45
+    line: 4
+    ZombieType: 2
+  - spawnTime: 53
+    line: 0
+    ZombieType: 0
+  - spawnTime: 60
+    line: 3
+    ZombieType: 0
+  - spawnTime: 68
+    line: 3
+    ZombieType: 0
+  - spawnTime: 70
+    line: 1
+    ZombieType: 1
+  - spawnTime: 78
+    line: 0
+    ZombieType: 0
+  - spawnTime: 84
+    line: 2
+    ZombieType: 2
+  - spawnTime: 90
+    line: 4
+    ZombieType: 0
+  - spawnTime: 100
+    line: 0
+    ZombieType: 0
+  - spawnTime: 110
+    line: 3
+    ZombieType: 0
+  - spawnTime: 120
+    line: 4
+    ZombieType: 0
+  - spawnTime: 125
+    line: 0
+    ZombieType: 2
+  - spawnTime: 130
+    line: 1
+    ZombieType: 2
+  - spawnTime: 130
+    line: 2
+    ZombieType: 2
+  - spawnTime: 140
+    line: 3
+    ZombieType: 2
+  - spawnTime: 145
+    line: 4
+    ZombieType: 2
+  plants:
+  - plant: 0
+    price: 75
+  - plant: 1
+    price: 100
+  - plant: 2
+    price: 150
+  - plant: 3
+    price: 200
