@@ -25,11 +25,6 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void ResetTimeScale()
-    {
-        Time.timeScale = 1;
-    }
-
     public void OpenOptionPannel()
     {
         optionPannel?.SetActive(true);
