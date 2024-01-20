@@ -1,10 +1,9 @@
 <p align="center">
 <img alt="DataHub" src="https://i.goopics.net/izkikh.png" height="200px" />
 </p>
-<h1 align="center"> Plant VS Zombwish 👋</h1>
+<h1 align="center"> Plant VS Zombwish</h1>
 
-🏠 [Homepage](https://github.com/B3njaminV/unity-tower-defense) |
-📰 [Documentation](https://github.com/B3njaminV/unity-tower-defense)
+📰 [Documentation](https://github.com/B3njaminV/unity-tower-defense/wiki)
 
 ---
 
