@@ -13,14 +13,13 @@ public class SO_Scenario : ScriptableObject
         [SerializeField]
         public GameLineEnum line = GameLineEnum.Col1;
         [SerializeField]
-        [Min(0)]
-        public int ZombieType = 0;
+        public ZombiesEnum ZombieType;
     }
     [System.Serializable]
     public class PlantAvilable
     {
         [SerializeField]
-        public GameObject prefab;
+        public PlantEnum plant;
         [SerializeField]
         public uint price;
     }
@@ -34,8 +33,5 @@ public class SO_Scenario : ScriptableObject
 
     [SerializeField]
     public List<PlantAvilable> plants;
-
-    [SerializeField]
-    public List<GameObject> zombies;
 
 }

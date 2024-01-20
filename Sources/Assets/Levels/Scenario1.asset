@@ -30,11 +30,7 @@ MonoBehaviour:
     line: 4
     ZombieType: 2
   plants:
-  - prefab: {fileID: 2391903887055418413, guid: 3420c41c1afc8d544af173b1d4d42991, type: 3}
+  - plant: 0
     price: 50
-  - prefab: {fileID: 2391903887055418413, guid: fa96ae14163fd6e4db50534447edce91, type: 3}
+  - plant: 1
     price: 100
-  zombies:
-  - {fileID: 8028504333613449318, guid: df083ad502d97fc4d85f4c95d686c40e, type: 3}
-  - {fileID: 8028504333613449318, guid: ed37209befff2a049b3b5313c584d7f1, type: 3}
-  - {fileID: 8028504333613449318, guid: 21a7fa1f82ca26f468b159eefeadad96, type: 3}

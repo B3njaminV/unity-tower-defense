@@ -1,12 +1,23 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScenarioManager : MonoBehaviour
 {
+    [System.Serializable]
+    public class Zombie_Prefab_Association
+    {
+        public ZombiesEnum zombieType;
+        public GameObject zombiePrefab;
+    }
+    public List<Zombie_Prefab_Association> LzombiesPrefabs;
+
     private SO_Scenario scenario;
 
     private float startingTime;
     private GameObject[] spawners;
+
+    private Dictionary<ZombiesEnum, GameObject> zombiesPrefabs = new Dictionary<ZombiesEnum, GameObject>();
 
     private int nextSpawn = 0;
 
@@ -18,6 +29,10 @@ public class ScenarioManager : MonoBehaviour
     {
         scenario = GameManager.Instance.GetNextLevel();
         spawners = GameObject.FindGameObjectsWithTag("ZombieSpawner");
+        foreach (var zp in LzombiesPrefabs) {
+            zombiesPrefabs.Add(zp.zombieType, zp.zombiePrefab);
+        }
+        LzombiesPrefabs = null;
     }
 
     // Start is called before the first frame update
@@ -38,9 +53,9 @@ public class ScenarioManager : MonoBehaviour
         if (ElapsedTime >= currentSpawn.spawnTime )
         {
             // Spawn Zombie
-            if((int)currentSpawn.line < spawners.Length && currentSpawn.ZombieType < scenario.zombies.Count)
+            if((int)currentSpawn.line < spawners.Length)
             {
-                Instantiate(scenario.zombies[currentSpawn.ZombieType], spawners[(int)currentSpawn.line].GetComponent<Transform>());
+                Instantiate(zombiesPrefabs[currentSpawn.ZombieType], spawners[(int)currentSpawn.line].GetComponent<Transform>());
             }
             nextSpawn++;
         }
@@ -49,6 +64,11 @@ public class ScenarioManager : MonoBehaviour
     public int GetNumberOfZombiesInScenario()
     {
         return scenario.spawns.Count;
+    }
+
+    public List<SO_Scenario.PlantAvilable> GetUsablePlants()
+    {
+        return scenario.plants;
     }
 
 }
