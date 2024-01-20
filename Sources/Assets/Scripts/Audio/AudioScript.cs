@@ -5,6 +5,8 @@ public class AudioScript : MonoBehaviour
 {
     private AudioManager _audioManager;
     private AudioSource _audioSource;
+    private static AudioScript instance = null;
+    public static AudioScript Instance => instance;
 
     private void Start()
     {
@@ -18,6 +20,20 @@ public class AudioScript : MonoBehaviour
 
         _audioManager = new AudioManager(_audioSource);
         PlaySong();
+    }
+   
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void PlaySong()
