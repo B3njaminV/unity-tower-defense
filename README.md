@@ -21,17 +21,16 @@ La documentation du projet est disponible sur le [wiki suivant](https://github.c
 
 ## 🚀 Utilisation
 
-Pour exécuter l'application, il faut télécharger le dossier "Build" et exécuter le fichier "Plant VS Zombwish.exe".
+Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu (Build_Windows_X64.zip). Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application "PlantVSZombWish.exe".
 
-```diff
-- ATTENTION : Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
-```
+> [!WARNING]  
+> Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
 
-```diff
-- ATTENTION : Microsoft Defender SmartScreen peut bloquer l'application, vous pouvez tout de même l'exécuter en cliquant sur "Plus d'infos" puis "Exécuter quand même".
-```
+> [!CAUTION]
+> Microsoft Defender SmartScreen peut bloquer l'application, vous pouvez tout de même l'exécuter en cliquant sur "Informations complémentaires" puis "Exécuter quand même".
 
-## 📍 Prérequis
+
+## 📍 Prérequis pour la compilation
 
 - Unity 2022.3.14f1
 - Visual Studio 2019
@@ -42,13 +41,12 @@ Pour exécuter l'application, il faut télécharger le dossier "Build" et exécu
 **Vous pouvez compiler le projet manuellement en suivant les étapes suivantes** :
 
 - Ouvrir le projet avec Unity
-- Ouvrir la scène "MainScene"
 - Dans File > Build Settings, cliquer sur Build and Run
 - Choisir le dossier de destination (Build) et cliquer sur Select Folder (le dossier doit être vide)
 - L'application se lance automatiquement après la compilation
 
 
-## ✍️ Auteur
+## ✍️ Auteurs
 
 👤 **VALLEIX Benjamin**
 
