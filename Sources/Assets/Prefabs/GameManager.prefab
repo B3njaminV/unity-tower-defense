@@ -46,4 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Scenarios:
   - {fileID: 11400000, guid: 4e748d86c67ca1e4d8fee91a76f0074b, type: 2}
-  - {fileID: 11400000, guid: 326c62fc38b7c4148aeb0545ae9377cb, type: 2}
+  - {fileID: 11400000, guid: 7fe6245159c315048a98c7d10c8f137e, type: 2}
+  - {fileID: 11400000, guid: 7fd6fc6ea5d55674388c43487fed3e39, type: 2}
+  - {fileID: 11400000, guid: 5addba53427f9fe4f94786bb06e16855, type: 2}
+  - {fileID: 11400000, guid: 72992903395603a498ece82d3468250f, type: 2}
