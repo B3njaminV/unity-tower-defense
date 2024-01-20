@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ManagerScene : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject optionPannel;
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -18,5 +21,18 @@ public class ManagerScene : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void OpenOptionPannel()
+    {
+        optionPannel?.SetActive(true);
+    }
 
+    public void CloseOptionPannel()
+    {
+        optionPannel?.SetActive(false);
+    }
+
+    public void RemoveSave()
+    {
+        GameManager.Instance.ResetSave();
+    }
 }

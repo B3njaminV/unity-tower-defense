@@ -27,9 +27,7 @@ public class LevelAdvencementController : MonoBehaviour
 
     private void LevelWin()
     {
-        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
         GameManager.Instance.LevelWin();
-        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
         gameObject.SetActive(false);
     }
 }
