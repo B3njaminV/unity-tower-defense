@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public int NbScenario { get { return _Scenarios.Count; } }
 
+    public int CurrentLevel { get { return Saver.GetSavedLevel(); }}
 
     public SO_Scenario GetNextLevel()
     {
@@ -43,9 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetSave()
     {
-        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
         Saver.RemoveSave();
-        Debug.Log(GameManager.Instance.Saver.GetSavedLevel());
     }
 
 }
