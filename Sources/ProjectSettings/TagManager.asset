@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Ennemy
   - ZombieSpawner
+  - MoneyController
   layers:
   - Default
   - TransparentFX

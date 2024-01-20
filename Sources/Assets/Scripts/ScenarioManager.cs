@@ -12,6 +12,8 @@ public class ScenarioManager : MonoBehaviour
 
     public float ElapsedTime { get { return Time.time - startingTime; } }
 
+    public int StartingRessources {  get { return scenario.startingRessources; } }
+
     private void Awake()
     {
         scenario = GameManager.Instance.GetNextLevel();
