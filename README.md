@@ -17,11 +17,11 @@ Préparez-vous à planter et à déclencher des attaques de souhaits saugrenus d
 
 ## 📚 Documentation
 
-La documentation du projet est disponible sur le [wiki suivant](https://github.com/B3njaminV/unity-tower-defense/wiki)
+La documentation du projet est disponible sur le [wiki](https://github.com/B3njaminV/unity-tower-defense/wiki)
 
 ## 🚀 Utilisation
 
-Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu (Build_Windows_X64.zip). Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application "PlantVSZombWish.exe".
+Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu `Build_Windows_X64.zip`. Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application `PlantVSZombWish.exe`.
 
 > [!WARNING]  
 > Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
