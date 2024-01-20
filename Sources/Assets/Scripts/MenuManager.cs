@@ -47,6 +47,11 @@ public class MenuManager : MonoBehaviour
         UpdateLevelText();
     }
 
+    public void SwitchMainSong()
+    {
+        AudioScript.Instance.SwitchToMainSong();
+    }
+
     public void UpdateLevelText()
     {
         if(levelToLaunch != null)
