@@ -7,11 +7,46 @@
 
 ---
 
-## 📣 Introduction
+## 📝 Description
+
+Plongez dans l'univers déjanté de Plant vs. ZombWish, le seul jeu où les plantes se battent pour protéger leur jardin contre une invasion de zombies dotés de souhaits bizarres ! Choisissez parmi une incroyable variété de plantes farfelues, chacune équipée de compétences spéciales. Attention, les zombies peuvent avoir des rêves roses, mais les plantes ne lancent que des boules vertes... et cela ne les rend que plus redoutables ! Utilisez vos plantes pour repousser les zombies et protéger votre jardin. Chaque plante a ses propres capacités, alors choisissez judicieusement !
+
+Les zombies, de leur côté, ne veulent qu'une chose : réaliser leurs souhaits les plus loufoques, comme avoir une danse endiablée ou devenir le président du club des morts-vivants. Utilisez vos plantes stratégiquement pour contrecarrer ces aspirations absurdes et protéger votre jardin de la folie zombie.
+
+Préparez-vous à planter et à déclencher des attaques de souhaits saugrenus dans Plant vs. ZombWish, la version "wish" du jeu classique ! Que la bataille commence entre les plantes farfelues et les zombies pleins de rêves délirants !
+
+## 📚 Documentation
+
+La documentation du projet est disponible sur le [wiki suivant](https://github.com/B3njaminV/unity-tower-defense/wiki)
+
+## 🚀 Utilisation
+
+Pour exécuter l'application, il faut télécharger le dossier "Build" et exécuter le fichier "Plant VS Zombwish.exe".
+
+```diff
+- ATTENTION : Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
+```
+
+```diff
+- ATTENTION : Microsoft Defender SmartScreen peut bloquer l'application, vous pouvez tout de même l'exécuter en cliquant sur "Plus d'infos" puis "Exécuter quand même".
+```
 
 ## 📍 Prérequis
 
-## ‍💻 Installation
+- Unity 2022.3.14f1
+- Visual Studio 2019
+- Git
+
+## ‍💻 Compilation
+
+**Vous pouvez compiler le projet manuellement en suivant les étapes suivantes** :
+
+- Ouvrir le projet avec Unity
+- Ouvrir la scène "MainScene"
+- Dans File > Build Settings, cliquer sur Build and Run
+- Choisir le dossier de destination (Build) et cliquer sur Select Folder (le dossier doit être vide)
+- L'application se lance automatiquement après la compilation
+
 
 ## ✍️ Auteur
 
