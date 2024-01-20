@@ -21,7 +21,8 @@ public class SO_Scenario : ScriptableObject
         [SerializeField]
         public PlantEnum plant;
         [SerializeField]
-        public uint price;
+        [Min(0)]
+        public int price;
     }
 
     [SerializeField]

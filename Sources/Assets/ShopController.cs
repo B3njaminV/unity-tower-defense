@@ -9,6 +9,7 @@ public class ShopController : MonoBehaviour
         public GameObject obj;
         public PlantEnum plant;
         public GameObject selectionMarker;
+        [HideInInspector] public int price = 0;
     }
 
     [SerializeField]
@@ -17,7 +18,7 @@ public class ShopController : MonoBehaviour
     [SerializeField]
     private ScenarioManager scenarioManager;
 
-    public PlantEnum selectedPlant { get; private set; }
+    public PlantButton selectedPlant { get; private set; }
 
     private void Start()
     {
@@ -28,7 +29,8 @@ public class ShopController : MonoBehaviour
             {
                 if (pb.plant.Equals(up.plant))
                 {
-                    pb.obj.GetComponentInChildren<Text>().text = up.price.ToString();
+                    pb.price = up.price;
+                    pb.obj.GetComponentInChildren<Text>().text = pb.price.ToString();
                     pb.obj.SetActive(true);
                     pb.obj.GetComponent<Button>().onClick.AddListener(delegate { btnClick(pb); });
                 }
@@ -45,7 +47,7 @@ public class ShopController : MonoBehaviour
     {
         unSelectAllMarkers();
         plantButton.selectionMarker.gameObject.SetActive(true);
-        selectedPlant = plantButton.plant;
+        selectedPlant = plantButton;
     }
 
     private void unSelectAllMarkers()
