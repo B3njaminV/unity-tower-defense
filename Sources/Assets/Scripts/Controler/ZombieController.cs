@@ -2,12 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ZombieScript : MonoBehaviour, ILifeEventListener
+public class ZombieController : MonoBehaviour, ILifeEventListener
 {
-    public static int NbDeath { get; set; } = 0;
-
-    private Rigidbody2D rb;
-
+    // ----------------- From Editor
     [SerializeField]
     [Range(0f, 10f)]
     private float speed = 5;
@@ -15,71 +12,52 @@ public class ZombieScript : MonoBehaviour, ILifeEventListener
     [SerializeField]
     [Min(1)]
     private int attack = 5;
+    // -----------------------------
 
-    private float attackCooldown = 3f;
-    private float WalkCooldownAfterDamage = 1f;
-    private float lastAttackTime;
-    private float lastDamageTime;
-
-    private float knockbackForce = .1f;
-
-    private Animator animator;
-
-    private bool isDead = false;
+    public static int NbDeath { get; set; } = 0;
 
     private LifeableController lifeController;
+
+    private ZombieModel _model;
+    private ZombieView _view;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        lastAttackTime = Time.time - attackCooldown;
-        animator = GetComponent<Animator>();
         lifeController = GetComponent<LifeableController>();
         lifeController.AddLifeEventListener(this);
+        _model = new ZombieModel(attack, speed);
+        _view = new ZombieView(GetComponent<Rigidbody2D>(), GetComponent<Animator>());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDead) { return; }
-
-        float veloc = - rb.velocity.x;
-        if(veloc < -knockbackForce) 
-        { 
-            rb.velocity = new Vector2(-knockbackForce, 0f);
-            veloc = -knockbackForce;
-        }
-
-        animator.SetFloat("Speed", veloc);
-        if (Time.time - lastDamageTime > WalkCooldownAfterDamage && veloc < speed)
-        {
-            rb.AddForce(Vector2.left);
-        }
+        if (_model.IsDead) { return; }
+        _view.UpdateMotion(ZombieModel.KnockbackForce, _model.Speed, _model.CanMove);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
 
-        if (isDead) { return; }
+        if (_model.IsDead) { return; }
 
         // Take damages from bullet
         if (collision.gameObject.CompareTag("Bullet"))
         {
             var bullet = collision.gameObject.GetComponent<bulletScript>();
 
-            animator.SetTrigger("Damages");
-            rb.velocity = Vector2.zero;
-            lastDamageTime = Time.time;
+            _view.Damages();
             lifeController.TakeDamages(bullet.getDamages());
 
             // reset attack time
-            lastAttackTime = Time.time;
+            _model.ResetAttackTime();
+            _model.ResetDamageTime();
             bullet.Remove();
         }
 
         // Attack plant
-        else if (collision.gameObject.CompareTag("Plant") && Time.time - lastAttackTime > attackCooldown)
+        else if (collision.gameObject.CompareTag("Plant") && _model.CanAttack)
         {
             Attack(collision.gameObject.GetComponent<LifeableController>());
         }
@@ -88,11 +66,9 @@ public class ZombieScript : MonoBehaviour, ILifeEventListener
 
     private void Attack(LifeableController range)
     {
-        animator.SetTrigger("Attack");
+        _view.Attack();
+        _model.Attack();
         StartCoroutine(WillGiveDamages(range));
-
-        // Remember that we recently attacked.
-        lastAttackTime = Time.time;
     }
 
     private IEnumerator WillGiveDamages(LifeableController range)
@@ -111,8 +87,8 @@ public class ZombieScript : MonoBehaviour, ILifeEventListener
     {
         NbDeath++;
         StartCoroutine(WillDie());
-        animator.SetTrigger("Death");
-        isDead = true;
+        _view.Death();
+        _model.IsDead = true;
         GetComponent<CapsuleCollider2D>().enabled = false;
     }
 }
