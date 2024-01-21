@@ -74,7 +74,7 @@ public class ZombieController : MonoBehaviour, ILifeEventListener
     private IEnumerator WillGiveDamages(LifeableController range)
     {
         yield return new WaitForSeconds(0.3f);
-        range.TakeDamages(attack);
+        range.TakeDamages(_model.AttackVal);
     }
 
     private IEnumerator WillDie()

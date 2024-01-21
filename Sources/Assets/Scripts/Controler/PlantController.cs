@@ -30,7 +30,7 @@ public class PlantController : MonoBehaviour, ILifeEventListener
     private void Attack()
     {
         _view.Attack();
-        _model.LastAttackTime = Time.time;
+        _model.ResetAttackTime();
     }
 
     // Update is called once per frame
