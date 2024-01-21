@@ -1,11 +1,13 @@
 
 
+using UnityEngine;
+
 public class PlantModel
 {
 
     public float ZombieDetectionLength { get; set; }
     public float AttackCooldown { get; set; }
-    public float LastAttackTime { get; set; }
+    public float LastAttackTime { get; private set; }
 
     public PlantModel(
         float zombieDetectionLength,
@@ -14,5 +16,10 @@ public class PlantModel
     { 
         AttackCooldown = attackCooldown;
         ZombieDetectionLength = zombieDetectionLength;
+    }
+
+    public void ResetAttackTime()
+    {
+        LastAttackTime = Time.time;
     }
 }

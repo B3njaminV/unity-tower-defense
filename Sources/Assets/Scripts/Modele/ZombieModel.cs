@@ -9,7 +9,7 @@ public class ZombieModel
     public float Speed { get; private set; }
 
     private const float _attackCooldown = 3f;
-    private int _attack;
+    public int AttackVal { get; private set; }
 
     private float _lastAttackTime;
     private float _lastDamageTime;
@@ -21,7 +21,7 @@ public class ZombieModel
         int attack, float speed
         ) 
     { 
-        _attack = attack;
+        AttackVal = attack;
         Speed = speed;
         _lastAttackTime = Time.time - _attackCooldown;
     }
