@@ -16,7 +16,6 @@ public class MainSong : IAudioState
 
     public void PlaySong()
     {
-        Debug.Log("Lancement musique : main_soundtrack");
         AudioClip songClip = Resources.Load<AudioClip>("main_soundtrack");
 
         if (songClip != null)

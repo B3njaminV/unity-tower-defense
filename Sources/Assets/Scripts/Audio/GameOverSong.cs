@@ -16,7 +16,6 @@ public class GameOverSong : IAudioState
 
     public void PlaySong()
     {
-        Debug.Log("Lancement musique : gameover_soundtrack");
         AudioClip songClip = Resources.Load<AudioClip>("gameover_soundtrack");
 
         if (songClip != null)
