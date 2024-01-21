@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public enum GameLineEnum
 {
-    Col1, Col2, Col3, Col4, Col5
+    Line1, Line2, Line3, Line4, Line5
 }
