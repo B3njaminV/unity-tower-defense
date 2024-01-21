@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 1591183694155323155}
   - component: {fileID: 5505802366865664417}
   - component: {fileID: 666812367055395071}
+  - component: {fileID: 7843783351934069531}
   m_Layer: 8
   m_Name: Zombie_Purple
   m_TagString: Ennemy
@@ -1241,11 +1242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3a0da10c984e042bafd1d023002025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeOkColor: {r: 0, g: 0, b: 0, a: 0}
-  lifeLowColor: {r: 0, g: 0, b: 0, a: 0}
-  lifeSlider: {fileID: 0}
-  lifeFillImage: {fileID: 0}
-  maxLife: 200
   speed: 2.5
   attack: 80
 --- !u!50 &1591183694155323155
@@ -1345,6 +1341,23 @@ CapsuleCollider2D:
   m_Offset: {x: 1.7119074, y: -0.33471623}
   m_Size: {x: 0.118164316, y: 3.3676488}
   m_Direction: 0
+--- !u!114 &7843783351934069531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028504333613449318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45b659cd311bb041845f8ba1fa3876b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeOkColor: {r: 0, g: 0, b: 0, a: 0}
+  lifeLowColor: {r: 0, g: 0, b: 0, a: 0}
+  lifeSlider: {fileID: 0}
+  lifeFillImage: {fileID: 0}
+  maxLife: 200
 --- !u!1 &8539148842809538833
 GameObject:
   m_ObjectHideFlags: 0

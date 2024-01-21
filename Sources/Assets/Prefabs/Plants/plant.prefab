@@ -179,6 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567f31f7508a83243bc9830c9ced8227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeOkColor: {r: 0.10268724, g: 1, b: 0, a: 0.50980395}
+  lifeLowColor: {r: 1, g: 0, b: 0, a: 0.5568628}
+  lifeSlider: {fileID: 698263157698739556}
+  lifeFillImage: {fileID: 2027906195198795683}
+  maxLife: 100
   BulletSpawnPosition: {fileID: 1025977678869384611}
   bulletPrefab: {fileID: 2190042072848539097, guid: a19802e25f2fd7e42b6b747efd8c1f49, type: 3}
   zombieDetectionLength: 35

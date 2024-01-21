@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ZombieScript : LifeRange
+public class ZombieScript : MonoBehaviour, ILifeEventListener
 {
     public static int NbDeath { get; set; } = 0;
 
@@ -27,13 +27,16 @@ public class ZombieScript : LifeRange
 
     private bool isDead = false;
 
+    private LifeableController lifeController;
+
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
         rb = GetComponent<Rigidbody2D>();
         lastAttackTime = Time.time - attackCooldown;
         animator = GetComponent<Animator>();
+        lifeController = GetComponent<LifeableController>();
+        lifeController.AddLifeEventListener(this);
     }
 
     // Update is called once per frame
@@ -68,7 +71,7 @@ public class ZombieScript : LifeRange
             animator.SetTrigger("Damages");
             rb.velocity = Vector2.zero;
             lastDamageTime = Time.time;
-            this.TakeDamages(bullet.getDamages());
+            lifeController.TakeDamages(bullet.getDamages());
 
             // reset attack time
             lastAttackTime = Time.time;
@@ -78,12 +81,12 @@ public class ZombieScript : LifeRange
         // Attack plant
         else if (collision.gameObject.CompareTag("Plant") && Time.time - lastAttackTime > attackCooldown)
         {
-            Attack(collision.gameObject.GetComponent<LifeRange>());
+            Attack(collision.gameObject.GetComponent<LifeableController>());
         }
 
     }
 
-    private void Attack(LifeRange range)
+    private void Attack(LifeableController range)
     {
         animator.SetTrigger("Attack");
         StartCoroutine(WillGiveDamages(range));
@@ -92,19 +95,10 @@ public class ZombieScript : LifeRange
         lastAttackTime = Time.time;
     }
 
-    private IEnumerator WillGiveDamages(LifeRange range)
+    private IEnumerator WillGiveDamages(LifeableController range)
     {
         yield return new WaitForSeconds(0.3f);
         range.TakeDamages(attack);
-    }
-
-    protected override void Death()
-    {
-        NbDeath++;
-        StartCoroutine(WillDie());
-        animator.SetTrigger("Death");
-        isDead = true;
-        GetComponent<CapsuleCollider2D>().enabled = false;
     }
 
     private IEnumerator WillDie()
@@ -113,4 +107,12 @@ public class ZombieScript : LifeRange
         Destroy(this.gameObject);
     }
 
+    public void OnDeath()
+    {
+        NbDeath++;
+        StartCoroutine(WillDie());
+        animator.SetTrigger("Death");
+        isDead = true;
+        GetComponent<CapsuleCollider2D>().enabled = false;
+    }
 }

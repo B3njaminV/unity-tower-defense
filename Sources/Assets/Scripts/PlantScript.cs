@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlantScript : MonoBehaviour
+public class PlantScript : MonoBehaviour, ILifeEventListener
 {
     private Animator anim;
 
@@ -21,6 +21,7 @@ public class PlantScript : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        GetComponent<LifeableController>().AddLifeEventListener(this);
     }
 
     private void Attack()
@@ -47,5 +48,10 @@ public class PlantScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, Vector2.right * zombieDetectionLength);
+    }
+
+    public void OnDeath()
+    {
+        Destroy(gameObject);
     }
 }
