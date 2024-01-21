@@ -21,7 +21,7 @@ La documentation du projet est disponible sur le [wiki](https://github.com/B3nja
 
 ## 🚀 Utilisation
 
-Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu `Build_Windows_X64.zip`. Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application `PlantVSZombWish.exe`.
+Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu `Build_Windows_X64.zip`. Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application `PlantVSZombWish.exe` en conservant les autres fichiers et dossiers à coté.
 
 > [!WARNING]  
 > Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
