@@ -1,20 +1,52 @@
 <p align="center">
-<img alt="DataHub" src="https://cdn4.iconfinder.com/data/icons/game-design-flat-icons-2/512/22_tower_level_game_design_flat_icon-512.png" height="200px" />
+<img alt="DataHub" src="https://i.goopics.net/izkikh.png" height="200px" />
 </p>
-<h1 align="center"> Tower Defense 👋</h1>
+<h1 align="center"> Plant VS Zombwish</h1>
 
-🏠 [Homepage](https://github.com/B3njaminV/unity-tower-defense) |
-📰 [Documentation](https://github.com/B3njaminV/unity-tower-defense)
+📰 [Documentation](https://github.com/B3njaminV/unity-tower-defense/wiki)
 
 ---
 
-## 📣 Introduction
+## 📝 Description
 
-## 📍 Prérequis
+Plongez dans l'univers déjanté de Plant vs. ZombWish, le seul jeu où les plantes se battent pour protéger leur jardin contre une invasion de zombies dotés de souhaits bizarres ! Choisissez parmi une incroyable variété de plantes farfelues, chacune équipée de compétences spéciales. Attention, les zombies peuvent avoir des rêves roses, mais les plantes ne lancent que des boules vertes... et cela ne les rend que plus redoutables ! Utilisez vos plantes pour repousser les zombies et protéger votre jardin. Chaque plante a ses propres capacités, alors choisissez judicieusement !
 
-## ‍💻 Installation
+Les zombies, de leur côté, ne veulent qu'une chose : réaliser leurs souhaits les plus loufoques, comme avoir une danse endiablée ou devenir le président du club des morts-vivants. Utilisez vos plantes stratégiquement pour contrecarrer ces aspirations absurdes et protéger votre jardin de la folie zombie.
 
-## ✍️ Auteur
+Préparez-vous à planter et à déclencher des attaques de souhaits saugrenus dans Plant vs. ZombWish, la version "wish" du jeu classique ! Que la bataille commence entre les plantes farfelues et les zombies pleins de rêves délirants !
+
+## 📚 Documentation
+
+La documentation du projet est disponible sur le [wiki](https://github.com/B3njaminV/unity-tower-defense/wiki)
+
+## 🚀 Utilisation
+
+Pour exécuter l'application, rendez-vous dans l'onglet [Releases](https://github.com/B3njaminV/unity-tower-defense/releases) et téléchargez la dernière version du jeu `Build_Windows_X64.zip`. Une fois le téléchargement terminé, décompressez le fichier zip et lancez l'application `PlantVSZombWish.exe`.
+
+> [!WARNING]  
+> Lors du téléchargement, il est possible que Google Chrome bloque le téléchargement. Pour le télécharger, il faut cliquer sur la flèche à droite de "Enregistrer" puis cliquer sur "Conserver".
+
+> [!CAUTION]
+> Microsoft Defender SmartScreen peut bloquer l'application, vous pouvez tout de même l'exécuter en cliquant sur "Informations complémentaires" puis "Exécuter quand même".
+
+
+## 📍 Prérequis pour la compilation
+
+- Unity 2022.3.14f1
+- Visual Studio 2019
+- Git
+
+## ‍💻 Compilation
+
+**Vous pouvez compiler le projet manuellement en suivant les étapes suivantes** :
+
+- Ouvrir le projet avec Unity
+- Dans File > Build Settings, cliquer sur Build and Run
+- Choisir le dossier de destination (Build) et cliquer sur Select Folder (le dossier doit être vide)
+- L'application se lance automatiquement après la compilation
+
+
+## ✍️ Auteurs
 
 👤 **VALLEIX Benjamin**
 
