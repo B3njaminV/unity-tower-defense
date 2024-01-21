@@ -16,7 +16,6 @@ public class MenuSong : IAudioState
 
     public void PlaySong()
     {
-        Debug.Log("Lancement musique : menu_soundtrack");
         AudioClip songClip = Resources.Load<AudioClip>("menu_soundtrack");
 
         if (songClip != null)

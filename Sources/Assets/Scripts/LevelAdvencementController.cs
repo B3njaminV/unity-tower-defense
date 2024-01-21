@@ -17,12 +17,12 @@ public class LevelAdvencementController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1.0f;
-        ZombieScript.NbDeath = 0;
+        ZombieController.NbDeath = 0;
         nbTotalZombies = scenarioManager.GetNumberOfZombiesInScenario();
     }
     private void Update()
     {
-        float advencement = ZombieScript.NbDeath / (float)nbTotalZombies;
+        float advencement = ZombieController.NbDeath / (float)nbTotalZombies;
         levelRange.SetCurrentLevelAdvencement(advencement);
         if(advencement >= 1f)
         {
