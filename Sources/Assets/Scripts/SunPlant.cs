@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SunPlant : MonoBehaviour
+public class SunPlant : MonoBehaviour, ILifeEventListener
 {
     public GameObject sunPrefab;
     [SerializeField]
@@ -18,6 +18,7 @@ public class SunPlant : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         lastGrowTime = Time.time;
+        GetComponent<LifeableController>().AddLifeEventListener(this);
     }
 
     // Update is called once per frame
@@ -35,5 +36,10 @@ public class SunPlant : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         currentSun = Instantiate(sunPrefab, sunSpawners[Random.Range(0, sunSpawners.Length)]);
+    }
+
+    public void OnDeath()
+    {
+       Destroy(gameObject);
     }
 }
