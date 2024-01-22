@@ -11,7 +11,7 @@ public class SO_Scenario : ScriptableObject
         [Min(0f)]
         public float spawnTime = 0;
         [SerializeField]
-        public GameLineEnum line = GameLineEnum.Col1;
+        public GameLineEnum line = GameLineEnum.Line1;
         [SerializeField]
         public ZombiesEnum ZombieType;
     }
